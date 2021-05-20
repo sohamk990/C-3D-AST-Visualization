@@ -4,7 +4,3 @@ int main()
     int x=0;
     printf("hello world\n");
 }
-void do_nothing()
-{
-    ;
-}

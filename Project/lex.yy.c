@@ -614,9 +614,9 @@ int yy_flex_debug = 0;
 #define YY_MORE_ADJ 0
 #define YY_RESTORE_YY_MORE_OFFSET
 char *yytext;
-#line 1 "check_lexer.l"
+#line 1 "graph_lexer.l"
 /* Definition Section has one variable which can be accessed inside yylex() and main() */
-#line 3 "check_lexer.l"
+#line 3 "graph_lexer.l"
 //int count = 0;
 #include "y.tab.h"
 #include "tree.h"
@@ -845,7 +845,7 @@ YY_DECL
 		}
 
 	{
-#line 20 "check_lexer.l"
+#line 21 "graph_lexer.l"
 
 #line 851 "lex.yy.c"
 
@@ -906,460 +906,460 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 21 "check_lexer.l"
+#line 22 "graph_lexer.l"
 { comment(); }
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 22 "check_lexer.l"
-{ count(); return(AUTO); }
+#line 23 "graph_lexer.l"
+{ count(); yylval.tree=create_node(yytext, 0, 0, NULL);return(AUTO); }
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 23 "check_lexer.l"
-{ count(); return(BREAK); }
+#line 24 "graph_lexer.l"
+{ count(); yylval.tree=create_node(yytext, 0, 0, NULL);return(BREAK); }
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 24 "check_lexer.l"
-{ count(); return(CASE); }
+#line 25 "graph_lexer.l"
+{ count(); yylval.tree=create_node(yytext, 0, 0, NULL);return(CASE); }
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 25 "check_lexer.l"
-{ count(); return(CHAR); }
+#line 26 "graph_lexer.l"
+{ count(); yylval.tree=create_node(yytext, 0, 0, NULL);return(CHAR); }
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 26 "check_lexer.l"
-{ count(); return(CONST); }
+#line 27 "graph_lexer.l"
+{ count(); yylval.tree=create_node(yytext, 0, 0, NULL);return(CONST); }
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 27 "check_lexer.l"
-{ count(); return(CONTINUE); }
+#line 28 "graph_lexer.l"
+{ count(); yylval.tree=create_node(yytext, 0, 0, NULL);return(CONTINUE); }
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 28 "check_lexer.l"
-{ count(); return(DEFAULT); }
+#line 29 "graph_lexer.l"
+{ count(); yylval.tree=create_node(yytext, 0, 0, NULL);return(DEFAULT); }
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
-#line 29 "check_lexer.l"
-{ count(); return(DO); }
+#line 30 "graph_lexer.l"
+{ count(); yylval.tree=create_node(yytext, 0, 0, NULL);return(DO); }
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
-#line 30 "check_lexer.l"
-{ count(); return(DOUBLE); }
+#line 31 "graph_lexer.l"
+{ count(); yylval.tree=create_node(yytext, 0, 0, NULL);return(DOUBLE); }
 	YY_BREAK
 case 11:
 YY_RULE_SETUP
-#line 31 "check_lexer.l"
-{ count(); return(ELSE); }
+#line 32 "graph_lexer.l"
+{ count(); yylval.tree=create_node(yytext, 0, 0, NULL);return(ELSE); }
 	YY_BREAK
 case 12:
 YY_RULE_SETUP
-#line 32 "check_lexer.l"
-{ count(); return(ENUM); }
+#line 33 "graph_lexer.l"
+{ count(); yylval.tree=create_node(yytext, 0, 0, NULL);return(ENUM); }
 	YY_BREAK
 case 13:
 YY_RULE_SETUP
-#line 33 "check_lexer.l"
-{ count(); return(EXTERN); }
+#line 34 "graph_lexer.l"
+{ count(); yylval.tree=create_node(yytext, 0, 0, NULL);return(EXTERN); }
 	YY_BREAK
 case 14:
 YY_RULE_SETUP
-#line 34 "check_lexer.l"
-{ count(); return(FLOAT); }
+#line 35 "graph_lexer.l"
+{ count(); yylval.tree=create_node(yytext, 0, 0, NULL);return(FLOAT); }
 	YY_BREAK
 case 15:
 YY_RULE_SETUP
-#line 35 "check_lexer.l"
-{ count(); return(FOR); }
+#line 36 "graph_lexer.l"
+{ count(); yylval.tree=create_node(yytext, 0, 0, NULL);return(FOR); }
 	YY_BREAK
 case 16:
 YY_RULE_SETUP
-#line 36 "check_lexer.l"
-{ count(); return(GOTO); }
+#line 37 "graph_lexer.l"
+{ count(); yylval.tree=create_node(yytext, 0, 0, NULL);return(GOTO); }
 	YY_BREAK
 case 17:
 YY_RULE_SETUP
-#line 37 "check_lexer.l"
-{ count(); return(IF); }
+#line 38 "graph_lexer.l"
+{ count(); yylval.tree=create_node(yytext, 0, 0, NULL);return(IF); }
 	YY_BREAK
 case 18:
 YY_RULE_SETUP
-#line 38 "check_lexer.l"
-{ count(); return(INT); }
+#line 39 "graph_lexer.l"
+{ count(); yylval.tree=create_node(yytext, 0, 0, NULL);return(INT); }
 	YY_BREAK
 case 19:
 YY_RULE_SETUP
-#line 39 "check_lexer.l"
-{ count(); return(LONG); }
+#line 40 "graph_lexer.l"
+{ count(); yylval.tree=create_node(yytext, 0, 0, NULL);return(LONG); }
 	YY_BREAK
 case 20:
 YY_RULE_SETUP
-#line 40 "check_lexer.l"
-{ count(); return(REGISTER); }
+#line 41 "graph_lexer.l"
+{ count(); yylval.tree=create_node(yytext, 0, 0, NULL);return(REGISTER); }
 	YY_BREAK
 case 21:
 YY_RULE_SETUP
-#line 41 "check_lexer.l"
-{ count(); return(RETURN); }
+#line 42 "graph_lexer.l"
+{ count(); yylval.tree=create_node(yytext, 0, 0, NULL);return(RETURN); }
 	YY_BREAK
 case 22:
 YY_RULE_SETUP
-#line 42 "check_lexer.l"
-{ count(); return(SHORT); }
+#line 43 "graph_lexer.l"
+{ count(); yylval.tree=create_node(yytext, 0, 0, NULL);return(SHORT); }
 	YY_BREAK
 case 23:
 YY_RULE_SETUP
-#line 43 "check_lexer.l"
-{ count(); return(SIGNED); }
+#line 44 "graph_lexer.l"
+{ count(); yylval.tree=create_node(yytext, 0, 0, NULL);return(SIGNED); }
 	YY_BREAK
 case 24:
 YY_RULE_SETUP
-#line 44 "check_lexer.l"
-{ count(); return(SIZEOF); }
+#line 45 "graph_lexer.l"
+{ count(); yylval.tree=create_node(yytext, 0, 0, NULL);return(SIZEOF); }
 	YY_BREAK
 case 25:
 YY_RULE_SETUP
-#line 45 "check_lexer.l"
-{ count(); return(STATIC); }
+#line 46 "graph_lexer.l"
+{ count(); yylval.tree=create_node(yytext, 0, 0, NULL);return(STATIC); }
 	YY_BREAK
 case 26:
 YY_RULE_SETUP
-#line 46 "check_lexer.l"
-{ count(); return(STRUCT); }
+#line 47 "graph_lexer.l"
+{ count(); yylval.tree=create_node(yytext, 0, 0, NULL);return(STRUCT); }
 	YY_BREAK
 case 27:
 YY_RULE_SETUP
-#line 47 "check_lexer.l"
-{ count(); return(SWITCH); }
+#line 48 "graph_lexer.l"
+{ count(); yylval.tree=create_node(yytext, 0, 0, NULL);return(SWITCH); }
 	YY_BREAK
 case 28:
 YY_RULE_SETUP
-#line 48 "check_lexer.l"
-{ count(); return(TYPEDEF); }
+#line 49 "graph_lexer.l"
+{ count(); yylval.tree=create_node(yytext, 0, 0, NULL);return(TYPEDEF); }
 	YY_BREAK
 case 29:
 YY_RULE_SETUP
-#line 49 "check_lexer.l"
-{ count(); return(UNION); }
+#line 50 "graph_lexer.l"
+{ count(); yylval.tree=create_node(yytext, 0, 0, NULL);return(UNION); }
 	YY_BREAK
 case 30:
 YY_RULE_SETUP
-#line 50 "check_lexer.l"
-{ count(); return(UNSIGNED); }
+#line 51 "graph_lexer.l"
+{ count(); yylval.tree=create_node(yytext, 0, 0, NULL);return(UNSIGNED); }
 	YY_BREAK
 case 31:
 YY_RULE_SETUP
-#line 51 "check_lexer.l"
-{ count(); return(VOID); }
+#line 52 "graph_lexer.l"
+{ count(); yylval.tree=create_node(yytext, 0, 0, NULL);return(VOID); }
 	YY_BREAK
 case 32:
 YY_RULE_SETUP
-#line 52 "check_lexer.l"
-{ count(); return(VOLATILE); }
+#line 53 "graph_lexer.l"
+{ count(); yylval.tree=create_node(yytext, 0, 0, NULL);return(VOLATILE); }
 	YY_BREAK
 case 33:
 YY_RULE_SETUP
-#line 53 "check_lexer.l"
-{ count(); return(WHILE); }
+#line 54 "graph_lexer.l"
+{ count(); yylval.tree=create_node(yytext, 0, 0, NULL);return(WHILE); }
 	YY_BREAK
 case 34:
 YY_RULE_SETUP
-#line 55 "check_lexer.l"
-{ count(); return(check_type()); }
+#line 56 "graph_lexer.l"
+{ count(); yylval.tree=create_node(yytext, 0, 0, NULL);return(check_type()); }
 	YY_BREAK
 case 35:
 YY_RULE_SETUP
-#line 57 "check_lexer.l"
-{ count(); return(CONSTANT); }
+#line 58 "graph_lexer.l"
+{ count(); yylval.tree=create_node(yytext, 0, 0, NULL);return(CONSTANT); }
 	YY_BREAK
 case 36:
 YY_RULE_SETUP
-#line 58 "check_lexer.l"
-{ count(); return(CONSTANT); }
+#line 59 "graph_lexer.l"
+{ count(); yylval.tree=create_node(yytext, 0, 0, NULL);return(CONSTANT); }
 	YY_BREAK
 case 37:
 YY_RULE_SETUP
-#line 59 "check_lexer.l"
-{ count(); return(CONSTANT); }
+#line 60 "graph_lexer.l"
+{ count(); yylval.tree=create_node(yytext, 0, 0, NULL);return(CONSTANT); }
 	YY_BREAK
 case 38:
 /* rule 38 can match eol */
 YY_RULE_SETUP
-#line 60 "check_lexer.l"
-{ count(); return(CONSTANT); }
+#line 61 "graph_lexer.l"
+{ count(); yylval.tree=create_node(yytext, 0, 0, NULL);return(CONSTANT); }
 	YY_BREAK
 case 39:
 YY_RULE_SETUP
-#line 62 "check_lexer.l"
-{ count(); return(CONSTANT); }
+#line 63 "graph_lexer.l"
+{ count(); yylval.tree=create_node(yytext, 0, 0, NULL);return(CONSTANT); }
 	YY_BREAK
 case 40:
 YY_RULE_SETUP
-#line 63 "check_lexer.l"
-{ count(); return(CONSTANT); }
+#line 64 "graph_lexer.l"
+{ count(); yylval.tree=create_node(yytext, 0, 0, NULL);return(CONSTANT); }
 	YY_BREAK
 case 41:
 YY_RULE_SETUP
-#line 64 "check_lexer.l"
-{ count(); return(CONSTANT); }
+#line 65 "graph_lexer.l"
+{ count(); yylval.tree=create_node(yytext, 0, 0, NULL);return(CONSTANT); }
 	YY_BREAK
 case 42:
 /* rule 42 can match eol */
 YY_RULE_SETUP
-#line 66 "check_lexer.l"
-{ count(); return(STRING_LITERAL); }
+#line 67 "graph_lexer.l"
+{ count(); yylval.tree=create_node(yytext, 0, 0, NULL);return(STRING_LITERAL); }
 	YY_BREAK
 case 43:
 YY_RULE_SETUP
-#line 68 "check_lexer.l"
-{ count(); return(ELLIPSIS); }
+#line 69 "graph_lexer.l"
+{ count(); yylval.tree=create_node(yytext, 0, 0, NULL);return(ELLIPSIS); }
 	YY_BREAK
 case 44:
 YY_RULE_SETUP
-#line 69 "check_lexer.l"
-{ count(); return(RIGHT_ASSIGN); }
+#line 70 "graph_lexer.l"
+{ count(); yylval.tree=create_node(yytext, 0, 0, NULL);return(RIGHT_ASSIGN); }
 	YY_BREAK
 case 45:
 YY_RULE_SETUP
-#line 70 "check_lexer.l"
-{ count(); return(LEFT_ASSIGN); }
+#line 71 "graph_lexer.l"
+{ count(); yylval.tree=create_node(yytext, 0, 0, NULL);return(LEFT_ASSIGN); }
 	YY_BREAK
 case 46:
 YY_RULE_SETUP
-#line 71 "check_lexer.l"
-{ count(); return(ADD_ASSIGN); }
+#line 72 "graph_lexer.l"
+{ count(); yylval.tree=create_node(yytext, 0, 0, NULL);return(ADD_ASSIGN); }
 	YY_BREAK
 case 47:
 YY_RULE_SETUP
-#line 72 "check_lexer.l"
-{ count(); return(SUB_ASSIGN); }
+#line 73 "graph_lexer.l"
+{ count(); yylval.tree=create_node(yytext, 0, 0, NULL);return(SUB_ASSIGN); }
 	YY_BREAK
 case 48:
 YY_RULE_SETUP
-#line 73 "check_lexer.l"
-{ count(); return(MUL_ASSIGN); }
+#line 74 "graph_lexer.l"
+{ count(); yylval.tree=create_node(yytext, 0, 0, NULL);return(MUL_ASSIGN); }
 	YY_BREAK
 case 49:
 YY_RULE_SETUP
-#line 74 "check_lexer.l"
-{ count(); return(DIV_ASSIGN); }
+#line 75 "graph_lexer.l"
+{ count(); yylval.tree=create_node(yytext, 0, 0, NULL);return(DIV_ASSIGN); }
 	YY_BREAK
 case 50:
 YY_RULE_SETUP
-#line 75 "check_lexer.l"
-{ count(); return(MOD_ASSIGN); }
+#line 76 "graph_lexer.l"
+{ count(); yylval.tree=create_node(yytext, 0, 0, NULL);return(MOD_ASSIGN); }
 	YY_BREAK
 case 51:
 YY_RULE_SETUP
-#line 76 "check_lexer.l"
-{ count(); return(AND_ASSIGN); }
+#line 77 "graph_lexer.l"
+{ count(); yylval.tree=create_node(yytext, 0, 0, NULL);return(AND_ASSIGN); }
 	YY_BREAK
 case 52:
 YY_RULE_SETUP
-#line 77 "check_lexer.l"
-{ count(); return(XOR_ASSIGN); }
+#line 78 "graph_lexer.l"
+{ count(); yylval.tree=create_node(yytext, 0, 0, NULL);return(XOR_ASSIGN); }
 	YY_BREAK
 case 53:
 YY_RULE_SETUP
-#line 78 "check_lexer.l"
-{ count(); return(OR_ASSIGN); }
+#line 79 "graph_lexer.l"
+{ count(); yylval.tree=create_node(yytext, 0, 0, NULL);return(OR_ASSIGN); }
 	YY_BREAK
 case 54:
 YY_RULE_SETUP
-#line 79 "check_lexer.l"
-{ count(); return(RIGHT_OP); }
+#line 80 "graph_lexer.l"
+{ count(); yylval.tree=create_node(yytext, 0, 0, NULL);return(RIGHT_OP); }
 	YY_BREAK
 case 55:
 YY_RULE_SETUP
-#line 80 "check_lexer.l"
-{ count(); return(LEFT_OP); }
+#line 81 "graph_lexer.l"
+{ count(); yylval.tree=create_node(yytext, 0, 0, NULL);return(LEFT_OP); }
 	YY_BREAK
 case 56:
 YY_RULE_SETUP
-#line 81 "check_lexer.l"
-{ count(); return(INC_OP); }
+#line 82 "graph_lexer.l"
+{ count(); yylval.tree=create_node(yytext, 0, 0, NULL);return(INC_OP); }
 	YY_BREAK
 case 57:
 YY_RULE_SETUP
-#line 82 "check_lexer.l"
-{ count(); return(DEC_OP); }
+#line 83 "graph_lexer.l"
+{ count(); yylval.tree=create_node(yytext, 0, 0, NULL);return(DEC_OP); }
 	YY_BREAK
 case 58:
 YY_RULE_SETUP
-#line 83 "check_lexer.l"
-{ count(); return(PTR_OP); }
+#line 84 "graph_lexer.l"
+{ count(); yylval.tree=create_node(yytext, 0, 0, NULL);return(PTR_OP); }
 	YY_BREAK
 case 59:
 YY_RULE_SETUP
-#line 84 "check_lexer.l"
-{ count(); return(AND_OP); }
+#line 85 "graph_lexer.l"
+{ count(); yylval.tree=create_node(yytext, 0, 0, NULL);return(AND_OP); }
 	YY_BREAK
 case 60:
 YY_RULE_SETUP
-#line 85 "check_lexer.l"
-{ count(); return(OR_OP); }
+#line 86 "graph_lexer.l"
+{ count(); yylval.tree=create_node(yytext, 0, 0, NULL);return(OR_OP); }
 	YY_BREAK
 case 61:
 YY_RULE_SETUP
-#line 86 "check_lexer.l"
-{ count(); return(LE_OP); }
+#line 87 "graph_lexer.l"
+{ count(); yylval.tree=create_node(yytext, 0, 0, NULL);return(LE_OP); }
 	YY_BREAK
 case 62:
 YY_RULE_SETUP
-#line 87 "check_lexer.l"
-{ count(); return(GE_OP); }
+#line 88 "graph_lexer.l"
+{ count(); yylval.tree=create_node(yytext, 0, 0, NULL);return(GE_OP); }
 	YY_BREAK
 case 63:
 YY_RULE_SETUP
-#line 88 "check_lexer.l"
-{ count(); return(EQ_OP); }
+#line 89 "graph_lexer.l"
+{ count(); yylval.tree=create_node(yytext, 0, 0, NULL);return(EQ_OP); }
 	YY_BREAK
 case 64:
 YY_RULE_SETUP
-#line 89 "check_lexer.l"
-{ count(); return(NE_OP); }
+#line 90 "graph_lexer.l"
+{ count(); yylval.tree=create_node(yytext, 0, 0, NULL);return(NE_OP); }
 	YY_BREAK
 case 65:
 YY_RULE_SETUP
-#line 90 "check_lexer.l"
-{ count(); return(';'); }
+#line 91 "graph_lexer.l"
+{ count(); yylval.tree=create_node(yytext, 0, 0, NULL);return(';'); }
 	YY_BREAK
 case 66:
 YY_RULE_SETUP
-#line 91 "check_lexer.l"
-{ count(); return('{'); }
+#line 92 "graph_lexer.l"
+{ count(); yylval.tree=create_node(yytext, 0, 0, NULL);return('{'); }
 	YY_BREAK
 case 67:
 YY_RULE_SETUP
-#line 92 "check_lexer.l"
-{ count(); return('}'); }
+#line 93 "graph_lexer.l"
+{ count(); yylval.tree=create_node(yytext, 0, 0, NULL);return('}'); }
 	YY_BREAK
 case 68:
 YY_RULE_SETUP
-#line 93 "check_lexer.l"
-{ count(); return(','); }
+#line 94 "graph_lexer.l"
+{ count(); yylval.tree=create_node(yytext, 0, 0, NULL);return(','); }
 	YY_BREAK
 case 69:
 YY_RULE_SETUP
-#line 94 "check_lexer.l"
-{ count(); return(':'); }
+#line 95 "graph_lexer.l"
+{ count(); yylval.tree=create_node(yytext, 0, 0, NULL);return(':'); }
 	YY_BREAK
 case 70:
 YY_RULE_SETUP
-#line 95 "check_lexer.l"
-{ count(); return('='); }
+#line 96 "graph_lexer.l"
+{ count(); yylval.tree=create_node(yytext, 0, 0, NULL);return('='); }
 	YY_BREAK
 case 71:
 YY_RULE_SETUP
-#line 96 "check_lexer.l"
-{ count(); return('('); }
+#line 97 "graph_lexer.l"
+{ count(); yylval.tree=create_node(yytext, 0, 0, NULL);return('('); }
 	YY_BREAK
 case 72:
 YY_RULE_SETUP
-#line 97 "check_lexer.l"
-{ count(); return(')'); }
+#line 98 "graph_lexer.l"
+{ count(); yylval.tree=create_node(yytext, 0, 0, NULL);return(')'); }
 	YY_BREAK
 case 73:
 YY_RULE_SETUP
-#line 98 "check_lexer.l"
-{ count(); return('['); }
+#line 99 "graph_lexer.l"
+{ count(); yylval.tree=create_node(yytext, 0, 0, NULL);return('['); }
 	YY_BREAK
 case 74:
 YY_RULE_SETUP
-#line 99 "check_lexer.l"
-{ count(); return(']'); }
+#line 100 "graph_lexer.l"
+{ count(); yylval.tree=create_node(yytext, 0, 0, NULL);return(']'); }
 	YY_BREAK
 case 75:
 YY_RULE_SETUP
-#line 100 "check_lexer.l"
-{ count(); return('.'); }
+#line 101 "graph_lexer.l"
+{ count(); yylval.tree=create_node(yytext, 0, 0, NULL);return('.'); }
 	YY_BREAK
 case 76:
 YY_RULE_SETUP
-#line 101 "check_lexer.l"
-{ count(); return('&'); }
+#line 102 "graph_lexer.l"
+{ count(); yylval.tree=create_node(yytext, 0, 0, NULL);return('&'); }
 	YY_BREAK
 case 77:
 YY_RULE_SETUP
-#line 102 "check_lexer.l"
-{ count(); return('!'); }
+#line 103 "graph_lexer.l"
+{ count(); yylval.tree=create_node(yytext, 0, 0, NULL);return('!'); }
 	YY_BREAK
 case 78:
 YY_RULE_SETUP
-#line 103 "check_lexer.l"
-{ count(); return('~'); }
+#line 104 "graph_lexer.l"
+{ count(); yylval.tree=create_node(yytext, 0, 0, NULL);return('~'); }
 	YY_BREAK
 case 79:
 YY_RULE_SETUP
-#line 104 "check_lexer.l"
-{ count(); return('-'); }
+#line 105 "graph_lexer.l"
+{ count(); yylval.tree=create_node(yytext, 0, 0, NULL);return('-'); }
 	YY_BREAK
 case 80:
 YY_RULE_SETUP
-#line 105 "check_lexer.l"
-{ count(); return('+'); }
+#line 106 "graph_lexer.l"
+{ count(); yylval.tree=create_node(yytext, 0, 0, NULL);return('+'); }
 	YY_BREAK
 case 81:
 YY_RULE_SETUP
-#line 106 "check_lexer.l"
-{ count(); return('*'); }
+#line 107 "graph_lexer.l"
+{ count(); yylval.tree=create_node(yytext, 0, 0, NULL);return('*'); }
 	YY_BREAK
 case 82:
 YY_RULE_SETUP
-#line 107 "check_lexer.l"
-{ count(); return('/'); }
+#line 108 "graph_lexer.l"
+{ count(); yylval.tree=create_node(yytext, 0, 0, NULL);return('/'); }
 	YY_BREAK
 case 83:
 YY_RULE_SETUP
-#line 108 "check_lexer.l"
-{ count(); return('%'); }
+#line 109 "graph_lexer.l"
+{ count(); yylval.tree=create_node(yytext, 0, 0, NULL);return('%'); }
 	YY_BREAK
 case 84:
 YY_RULE_SETUP
-#line 109 "check_lexer.l"
-{ count(); return('<'); }
+#line 110 "graph_lexer.l"
+{ count(); yylval.tree=create_node(yytext, 0, 0, NULL);return('<'); }
 	YY_BREAK
 case 85:
 YY_RULE_SETUP
-#line 110 "check_lexer.l"
-{ count(); return('>'); }
+#line 111 "graph_lexer.l"
+{ count(); yylval.tree=create_node(yytext, 0, 0, NULL);return('>'); }
 	YY_BREAK
 case 86:
 YY_RULE_SETUP
-#line 111 "check_lexer.l"
-{ count(); return('^'); }
+#line 112 "graph_lexer.l"
+{ count(); yylval.tree=create_node(yytext, 0, 0, NULL);return('^'); }
 	YY_BREAK
 case 87:
 YY_RULE_SETUP
-#line 112 "check_lexer.l"
-{ count(); return('|'); }
+#line 113 "graph_lexer.l"
+{ count(); yylval.tree=create_node(yytext, 0, 0, NULL);return('|'); }
 	YY_BREAK
 case 88:
 YY_RULE_SETUP
-#line 113 "check_lexer.l"
-{ count(); return('?'); }
+#line 114 "graph_lexer.l"
+{ count(); yylval.tree=create_node(yytext, 0, 0, NULL);return('?'); }
 	YY_BREAK
 case 89:
 /* rule 89 can match eol */
 YY_RULE_SETUP
-#line 115 "check_lexer.l"
+#line 116 "graph_lexer.l"
 { count(); }
 	YY_BREAK
 case 90:
 YY_RULE_SETUP
-#line 116 "check_lexer.l"
+#line 117 "graph_lexer.l"
 { /* ignore bad characters */ }
 	YY_BREAK
 case 91:
 YY_RULE_SETUP
-#line 118 "check_lexer.l"
+#line 119 "graph_lexer.l"
 ECHO;
 	YY_BREAK
 #line 1366 "lex.yy.c"
@@ -2367,7 +2367,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 118 "check_lexer.l"
+#line 119 "graph_lexer.l"
 
   
 /*** Code Section prints the number of
@@ -2382,15 +2382,5 @@ void comment()
 }
 int check_type()
 {
-    char types[30][50]={"char", "signed char", "unsigned char", "short", "signed short", 
-                    "unsigned short", "unsigned short int", "int", "signed int", "unsigned int"
-                    "long", "signed long", "unsigned long", "signed long int", "unsigned long int",
-                    "long long", "long long int", "unsigned long long", "unsigned long long int",
-                    "signed long long", "signed long long int", "float", "double"};
-    for(int i=0;i<25;i++)
-    {
-        if(strcmp(yytext, types[i])==0)
-            return (TYPE_NAME);
-    }
-	return(IDENTIFIER);
+    return IDENTIFIER; 
 }

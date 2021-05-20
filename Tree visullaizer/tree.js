@@ -3,60 +3,46 @@ export default class TREE
 {
     constructor(scene)
     {
-        this.text = [13,
-            3, 1, 2, 3,
-            3, 4, 5, 6,
-            3, 7, 8, 9,
-            3, 10, 11, 12,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-        ]
-        this.tree=[];
+        this.text = [52,1,1,1,2,1,3,3,4,7,11,1,5,1,6,0,1,8,1,9,1,10,0,1,12,1,13,1,14,1,15,1,16,1,17,1,18,1,19,1,20,1,21,1,22,1,23,1,24,1,25,1,26,1,27,1,28,1,29,1,30,2,31,34,1,32,1,33,0,1,35,1,36,1,37,1,38,1,39,1,40,1,41,1,42,1,43,1,44,1,45,1,46,1,47,1,48,1,49,1,50,1,51,0];
+        this.tree = [];
+        this.N=this.text[0];
+        let temptree = [];
+        let tmp = [];
         for (let i=1;i<this.text.length;i++)
         {
             let j = this.text[i];
-            let tmp=[];
+            tmp = [];
             i++;
             for(let k=0;k<j;k++)
             {
-                tmp.push(this.text[i]);
+                tmp.push(Number(this.text[i]));                
                 i++;
             }
-            this.tree.push(new Float32Array([...tmp]));
+            // tmp = new Float32Array(tmp);
+            // this.tree.push(tmp);
+            // this.tree.push.apply(this.tree,tmp);
+            // console.log(tmp);
+            temptree.push(new Float32Array([...tmp]));
+            // console.log("LENGTH: ",j,tmp.length,temptree[temptree.length-1].length);
+            // console.log(this.tree);
+            // this.tree.push([...tmp]);
+
             i--;
         }
-        this.value = ['1234567890','1234567890','1234567890','1234567890','1234567890','1234567890','1234567890','1234567890','1234567890','1234567890','1234567890','1234567890','1234567890'];
-        // this.tree = [
-        //     new Float32Array([1,2,3]),
-        //     new Float32Array([4,5,6]),
-        //     new Float32Array([7,8,9]),
-        //     new Float32Array([10,11,12]),
-        //     new Float32Array([]),
-        //     new Float32Array([]),
-        //     new Float32Array([]),
-        //     new Float32Array([]),
-        //     new Float32Array([]),
-        //     new Float32Array([]),
-        //     new Float32Array([]),
-        //     new Float32Array([]),
-        //     new Float32Array([])
-        // ];
-
-
+        
+        this.value = ['source_code', 'translation_unit', 'external_declaration', 'function_definition', 'declaration_specifiers', 'type_specifier', 'int', 'declarator', 'direct_declarator', 'direct_declarator', 'main', 'compound_statement', 'statement_list', 'statement', 'expression_statement', 'expression', 'assignment_expression', 'conditional_expression', 'logical_or_expression', 'logical_and_expression', 'inclusive_or_expression', 'exclusive_or_expression', 'and_expression', 'equality_expression', 'relational_expression', 'shift_expression', 'additive_expression', 'multiplicative_expression', 'cast_expression', 'unary_expression', 'postfix_expression', 'postfix_expression', 'primary_expression', 'printf', 'assignment_expression_list', 'assignment_expression', 'conditional_expression', 'logical_or_expression', 'logical_and_expression', 'inclusive_or_expression', 'exclusive_or_expression', 'and_expression', 'equality_expression', 'relational_expression', 'shift_expression', 'additive_expression', 'multiplicative_expression', 'cast_expression', 'unary_expression', 'postfix_expression', 'primary_expression', '"hello world\n"'];
+        this.tree=temptree;
+    
         this.height = 0.0;
         this.height_array = [];
         this.X = []
         this.Y = []
         this.height_diameter = [];
         this.X_pos=0.0;
-
+        // console.log(this.N)
+        // console.log(this.tree)
+        // console.log(this.value.length)
+        
         for(let i=0;i<this.tree.length;i++)
         {
             this.height_array.push(0);
@@ -64,7 +50,7 @@ export default class TREE
 
         // console.log(this.height_array);
         // console.log(this.tree.length);
-        this.calculate_height(this.tree,0);
+        this.calculate_height(0);
 
         // console.log(this.height_array);
         this.height_array = new Float32Array([...this.height_array]);
@@ -90,7 +76,7 @@ export default class TREE
         this.getX(0);
         // console.log("ZXXX");
         // console.log(this.X);
-        
+        this.mode=0
         for(let i=0;i<this.X.length;i++)
         {
             if(this.mode==0)
@@ -113,15 +99,14 @@ export default class TREE
             this.drawlines(scene,this.tree[pi][i]);
         }
     }
-    calculate_height(tree,index)
+    calculate_height(index)
     {
-        for (let i=0;i<tree[index].length;i++)
+        for (let i=0;i<this.tree[index].length;i++)
         {
-            if(tree[index][i]!=0)
+            if(this.tree[index][i]!=0)
             {
-                // console.log(tree[index][i]);
-                this.height_array[tree[index][i]]=this.height_array[index]+1;
-                this.calculate_height(tree,tree[index][i]);
+                this.height_array[this.tree[index][i]]=this.height_array[index]+1;
+                this.calculate_height(this.tree[index][i]);
             }            
         }
     }

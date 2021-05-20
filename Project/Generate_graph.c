@@ -23,7 +23,7 @@ void dfs(struct Root* node, int *x)
 void dfs1(struct Root* node, FILE *fp)
 {
     // char str[]=",";
-    printf("%d\n", node->id);
+    // printf("%d\n", node->id);
 //    printf("%s\n", node->text);
         fseek(fp, 0, SEEK_END);
         fprintf(fp, "%d,", node->size_of_children);
@@ -35,7 +35,7 @@ void dfs1(struct Root* node, FILE *fp)
             // fprintf(fp, "%s", str);
         }
         fseek(fp, 0, SEEK_END);
-        fprintf(fp, "\n");
+        // fprintf(fp, "\n");
 
         for(int i=0;i<(node->size_of_children);i++)
         {
@@ -47,7 +47,7 @@ void dfs1(struct Root* node, FILE *fp)
 void dfs2(struct Root *node, FILE* fp)
 {
     fseek(fp, 0, SEEK_END);
-    fprintf(fp, "%s\n", node->text);
+    fprintf(fp, " \'%s\',", node->text);
     for(int i=0;i<node->size_of_children;i++)
     {
       dfs2(node->children[i], fp);
@@ -73,8 +73,8 @@ int main(void)
     
     fp=fopen("output.txt", "w+");
     fseek(fp, 0, SEEK_SET);
-    fprintf(fp, "%d\n", n);
-     printf("x\n");
+    fprintf(fp, "%d,", n);
+    //  printf("x\n");
     dfs1(mtree, fp);
     dfs2(mtree, fp);
     //*/
