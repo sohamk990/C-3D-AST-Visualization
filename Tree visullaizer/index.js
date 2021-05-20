@@ -18,8 +18,8 @@ function main()
 	document.body.appendChild(renderer.domElement);
 
 	//CAMERA
-	camera = new THREE.PerspectiveCamera(90, window.innerWidth / window.innerHeight, 1e-3, 1e5);
-	camera.position.x = -100;
+	camera = new THREE.PerspectiveCamera(120, window.innerWidth / window.innerHeight, 1e-3, 1e5);
+	// camera.position.x = -100;
 	// camera.position.y = 100;
 	camera.position.z = 100;
 
@@ -68,6 +68,7 @@ function main()
 		requestAnimationFrame(render);	
 		renderer.render(scene, camera);
 	}
-	render();	
+	render();
+
 }
 main();

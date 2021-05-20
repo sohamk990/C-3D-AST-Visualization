@@ -1,0 +1,6 @@
+
+int main()
+{
+    int x=a+b;
+    printf("hello world\n");
+}
