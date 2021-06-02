@@ -1,10 +1,10 @@
 Follow these steps to run our program:
 
-1)Download the zip file and decompress it.
+1) Download the zip file and decompress it.
 
-2)Open terminal and navigate to the project directory.
+2) Open terminal and navigate to the project directory.
 
-3)make sure you have flex and bison installed in your pc. If not, use ”sudo apt install flex” and then ”sudo apt install bison”.
+3) make sure you have flex and bison installed in your pc. If not, use ”sudo apt install flex” and then ”sudo apt install bison”.
 
 4) Open the ”hello.txt” file and copy your input program into it. (We are sorry for not making this interactive)
 
